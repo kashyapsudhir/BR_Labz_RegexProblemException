@@ -10,7 +10,7 @@ namespace RegexExceptionProblem
         {
             Console.WriteLine("Welcome to Regex Exception Problem user registration");
 
-            Console.WriteLine("Enter your Password  UC6, Check Password valid or not");
+            Console.WriteLine("Enter your Password  UC7, Check Password valid or not");
 
 
             //Console.WriteLine("Enter your Last Name, Check valid or not");
