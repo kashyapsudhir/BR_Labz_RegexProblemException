@@ -10,7 +10,12 @@ namespace RegexExceptionProblem
     public class RegexClass
     {
         //public static string NameRules = "^[A-Z]{1}[a-z]{2,}$";
-        public static string LastNameRules = "^[A-Z]{1}[a-z]{2,}$";
+        //public static string LastNameRules = "^[A-Z]{1}[a-z]{2,}$";
+        public static string EmailRules = "^[a-z]+[.+-_]{0,1}[0-9 a-z]+[@][a-z]+[.][a-z]{2,3}([.][a-z]{2,3}){0,1}$";
+
+
+
+        //UC2
 
         //public void ValidFirstName(string Name)
         //{
@@ -26,28 +31,43 @@ namespace RegexExceptionProblem
 
         //    catch (Exception e)
         //    {
-                
+
         //        Console.WriteLine("Enter valid name formate");
         //    }
         //}
 
-        public void ValidLastName(string LastName)
+        //UC2
+
+        //public void ValidLastName(string LastName)
+        //{
+        //    try
+        //    {
+
+
+        //        if (Regex.IsMatch(LastName, LastNameRules))
+        //            Console.WriteLine($"This is Valid LastName:\n{LastName}");
+        //        else
+        //            Console.WriteLine($"This is Invalid LastName:\n{LastName}");
+        //    }
+
+        //    catch (Exception e)
+        //    {
+
+        //        Console.WriteLine("Enter valid Last Name formate");
+        //    }
+        //}
+
+        //UC3
+
+        public void ValidEmail(string EmailCheck)
         {
-            try
-            {
 
-
-                if (Regex.IsMatch(LastName, LastNameRules))
-                    Console.WriteLine($"This is Valid LastName:\n{LastName}");
-                else
-                    Console.WriteLine($"This is Invalid LastName:\n{LastName}");
-            }
-
-            catch (Exception e)
-            {
-
-                Console.WriteLine("Enter valid Last Name formate");
-            }
+            if (Regex.IsMatch(EmailCheck, EmailRules))
+                Console.WriteLine($"This is Valid Email:{EmailCheck}");
+            else
+                Console.WriteLine($"This is Invalid Email:{EmailCheck}");
         }
+
+
     }
 }

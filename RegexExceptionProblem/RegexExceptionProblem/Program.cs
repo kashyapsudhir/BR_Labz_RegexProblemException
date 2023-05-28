@@ -10,16 +10,23 @@ namespace RegexExceptionProblem
         {
             Console.WriteLine("Welcome to Regex Exception Problem user registration");
 
-            Console.WriteLine("hello regex problem UC-2 Last Name");
+            Console.WriteLine("Enter your Email  UC3, CheckEmail valid or not");
+
 
             Console.WriteLine("Enter your Last Name, Check valid or not");
             //string TakeName = Console.ReadLine();
             RegexClass regexClass = new RegexClass();//create object of RegexClass
-            //regexClass.ValidFirstName(TakeName);
+                                                     //regexClass.ValidFirstName(TakeName);
 
             //UC2
-            string TakeLastName = Console.ReadLine();
-            regexClass.ValidLastName(TakeLastName);
+
+
+            //string TakeLastName = Console.ReadLine();
+            //regexClass.ValidLastName(TakeLastName);
+
+           
+            string Email = Console.ReadLine();
+            regexClass.ValidEmail(Email);
 
 
         }
