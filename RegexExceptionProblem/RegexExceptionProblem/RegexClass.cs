@@ -12,7 +12,10 @@ namespace RegexExceptionProblem
         //public static string NameRules = "^[A-Z]{1}[a-z]{2,}$";
         //public static string LastNameRules = "^[A-Z]{1}[a-z]{2,}$";
         // public static string EmailRules = "^[a-z]+[.+-_]{0,1}[0-9 a-z]+[@][a-z]+[.][a-z]{2,3}([.][a-z]{2,3}){0,1}$";
-        public static string PhoneNumberRules = "^[0-9]{0,2}[+]{0,1}[8 9]{0,1}[0-9]{9}$";
+        //public static string PhoneNumberRules = "^[0-9]{0,2}[+]{0,1}[8 9]{0,1}[0-9]{9}$";
+        public static string PasswordRules = "^[0-9 A-Z a-z]{8,}$";
+
+
 
 
         //UC2
@@ -71,22 +74,40 @@ namespace RegexExceptionProblem
 
         //UC4
 
-        public void CheckPhoneNumber(string PhoneNumber)
+        //public void CheckPhoneNumber(string PhoneNumber)
+        //{
+        //    try
+        //    {
+
+
+        //        if (Regex.IsMatch(PhoneNumber, PhoneNumberRules))
+        //            Console.WriteLine($"This is Valid PhoneNumber:{PhoneNumber}");
+        //        else
+        //            Console.WriteLine($"This is Invalid PhoneNumber:{PhoneNumber}");
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine("Please Enter Valid Mobile Number");
+        //    }
+
+        //}
+
+        //UC5
+        public void CheckPassword(string Password)
         {
             try
             {
 
-
-                if (Regex.IsMatch(PhoneNumber, PhoneNumberRules))
-                    Console.WriteLine($"This is Valid PhoneNumber:{PhoneNumber}");
+                if (Regex.IsMatch(Password, PasswordRules))
+                    Console.WriteLine($"This is Valid Password:{Password}");
                 else
-                    Console.WriteLine($"This is Invalid PhoneNumber:{PhoneNumber}");
+                    Console.WriteLine($"This is Invalid Password:{Password}");
             }
             catch (Exception e)
             {
-                Console.WriteLine("Please Enter Valid Mobile Number");
+                Console.WriteLine("Please enter valid password");
             }
-
         }
+
     }
 }
