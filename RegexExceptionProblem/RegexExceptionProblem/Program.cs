@@ -10,7 +10,7 @@ namespace RegexExceptionProblem
         {
             Console.WriteLine("Welcome to Regex Exception Problem user registration");
 
-            Console.WriteLine("Enter your Password  UC8, Check Password valid or not");
+            Console.WriteLine("Enter your Email  UC9, Check Email valid or not");
 
 
             //Console.WriteLine("Enter your Last Name, Check valid or not");
@@ -33,9 +33,12 @@ namespace RegexExceptionProblem
             //regexClass.CheckPhoneNumber(TakeNumber);
 
 
-            string Password = Console.ReadLine();
-            regexClass.CheckPassword(Password);
+            //string Password = Console.ReadLine();
+            //regexClass.CheckPassword(Password);
 
+
+            string UC9Email = Console.ReadLine();
+            regexClass.ValidEmail(UC9Email);
         }
     }
 }

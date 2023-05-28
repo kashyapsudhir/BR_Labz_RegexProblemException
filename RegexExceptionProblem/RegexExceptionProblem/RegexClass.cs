@@ -16,8 +16,8 @@ namespace RegexExceptionProblem
         //UC5- public static string PasswordRules = "^[0-9 A-Z a-z]{8,}$";
         //UC6- public static string PasswordRules = "^([A - Z]{0,1})[0-9A-Za-z]{8,}$";
         //UC7- public static string PasswordRules = "^[A-Z]{1,}[A-Za-z0-9]{1,10}";
-        public static string PasswordRules = "^(?=[a-zA-Z0-9#@$?-_]{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*$";
-
+        //UC8- public static string PasswordRules = "^(?=[a-zA-Z0-9#@$?-_]{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*$";
+        public static string UC9EmailRules = (@"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$");
 
 
 
@@ -96,21 +96,42 @@ namespace RegexExceptionProblem
         //}
 
         //UC5
-        public void CheckPassword(string Password)
+        //public void CheckPassword(string Password)
+        //{
+        //    try
+        //    {
+
+        //        if (Regex.IsMatch(Password, PasswordRules))
+        //            Console.WriteLine($"This is Valid Password:{Password}");
+        //        else
+        //            Console.WriteLine($"This is Invalid Password:{Password}");
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine("Please enter valid password");
+        //    }
+        //}
+
+        //UC9
+
+        public void ValidEmail(string EmailCheck)
         {
             try
             {
 
-                if (Regex.IsMatch(Password, PasswordRules))
-                    Console.WriteLine($"This is Valid Password:{Password}");
+
+
+                if (Regex.IsMatch(EmailCheck, UC9EmailRules))
+                    Console.WriteLine($"This is Valid Email:{UC9EmailRules}");
                 else
-                    Console.WriteLine($"This is Invalid Password:{Password}");
+                    Console.WriteLine($"This is Invalid Email:{UC9EmailRules}");
             }
             catch (Exception e)
             {
-                Console.WriteLine("Please enter valid password");
+                Console.WriteLine("Enter valid email address");
             }
         }
+
 
     }
 }
